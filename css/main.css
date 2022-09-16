@@ -12,6 +12,19 @@
     --white: #fff;
     --darkblue: #040D1F;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: var(--darkblue);
+}
+::-webkit-scrollbar-thumb {
+    width: 4px;
+    height: 10px;
+    background: var(--orange);
+    border-radius: 5px;
+}
+
 body {
     background: var(--darkblue);
     font-family: var(--fm-1);
@@ -82,6 +95,8 @@ ul {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 1;
+
 }
 .nav__container {
     display: flex;
@@ -194,6 +209,7 @@ ul {
     min-height: 367px;
     border-radius: 6px;
     position: relative;
+    overflow: hidden;
 }
 .films__card-image {
     position: absolute;
@@ -386,6 +402,8 @@ ul {
     top: 0;
     left: 0;
     z-index: -1;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 .series__card__lg-content {
@@ -459,6 +477,7 @@ ul {
     transition: .5s;
 }
 
+
 .series__card-content:hover .series__card-link{
     transform: scale(1.2) translateY(20px);
 }
@@ -470,9 +489,7 @@ ul {
 .series__card-content:hover .series__card-title{
     transform: scale(0);
 }
-
 /* series end */
-
 /* footer start */
 .footer {
     background: linear-gradient(90deg, #FF8C30 0%, #9F4700 100%);
